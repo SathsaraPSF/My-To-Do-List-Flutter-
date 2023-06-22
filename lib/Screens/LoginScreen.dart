@@ -1,6 +1,7 @@
 // ignore_for_file: avoid_unnecessary_containers
 
 import 'package:flutter/material.dart';
+import 'package:to_do_ist/Screens/RegisterScreen.dart';
 
 import 'BackGroundImage.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -163,7 +164,9 @@ class LoginScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 2),
                         child: TextButton(
                           style: raisedButtonStyle2,
-                          onPressed: () { },
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const RegisterScreen() ,));
+                          },
                           child:  const Text('Sign up',style: TextStyle(
                               color: Colors.white,
                               fontSize: 16.0,
