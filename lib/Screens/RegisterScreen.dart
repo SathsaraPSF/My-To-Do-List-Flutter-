@@ -5,9 +5,27 @@ import 'package:to_do_ist/Screens/TextInput.dart';
 import 'BackGroundImage.dart';
 
 class RegisterScreen extends StatelessWidget {
-  const RegisterScreen({super.key});
+   RegisterScreen({super.key});
 
-  @override
+   final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
+       minimumSize: const Size(200, 50), backgroundColor: Colors.white,
+       padding: const EdgeInsets.symmetric(horizontal: 16),
+       shape: const RoundedRectangleBorder(
+         borderRadius: BorderRadius.all(Radius.circular(10)),
+       )
+   );
+
+   final ButtonStyle  raisedButtonStyle2 = ElevatedButton.styleFrom(
+       minimumSize: const Size(200, 50), backgroundColor: Colors.transparent,
+       padding: const EdgeInsets.symmetric(horizontal: 16),
+       shape: const RoundedRectangleBorder(
+         borderRadius: BorderRadius.all(Radius.circular(10)),
+       )
+   );
+
+
+
+   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
@@ -72,7 +90,46 @@ class RegisterScreen extends StatelessWidget {
                     hint: "Confirm password",
                     inputType: TextInputType.visiblePassword,
                     action: TextInputAction.done,
-                    obscureText:true)
+                    obscureText:true),
+
+                Padding(
+                  padding: const EdgeInsets.only(top: 40),
+                  child: ElevatedButton(
+                    style: raisedButtonStyle,
+                    onPressed: () { },
+                    child:  Text('Confirm',style: TextStyle(
+                        color: Colors.indigo[900],
+                        fontSize: 16.0
+                    ),),
+                  ),
+                ),
+                 Padding(
+                  padding: const EdgeInsets.all(20.0),
+                  child: Text("Already have an account ?",style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                      shadows: [
+                        Shadow(
+                            color: Colors.black.withOpacity(0.8),
+                            offset: const Offset(5, 5),
+                            blurRadius: 10.0)
+                      ]),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(top: 0),
+                  child: TextButton(
+                    style: raisedButtonStyle2,
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen() ,));
+                    },
+                    child:  const Text('Sign in',style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20.0,
+                        fontFamily: 'FontSubHeader'
+                    ),),
+                  ),
+                ),
               ],
             ),
           ),
