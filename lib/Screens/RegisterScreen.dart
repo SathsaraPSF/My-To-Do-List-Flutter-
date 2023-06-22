@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:to_do_ist/Screens/LoginScreen.dart';
 import 'package:to_do_ist/Screens/TextInput.dart';
 
 import 'BackGroundImage.dart';
@@ -121,7 +122,7 @@ class RegisterScreen extends StatelessWidget {
                   child: TextButton(
                     style: raisedButtonStyle2,
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen() ,));
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                     },
                     child:  const Text('Sign in',style: TextStyle(
                         color: Colors.white,
