@@ -7,23 +7,23 @@ import 'BackGroundImage.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginScreen extends StatelessWidget {
-   LoginScreen({super.key});
+  LoginScreen({super.key});
 
   final ButtonStyle raisedButtonStyle = ElevatedButton.styleFrom(
-    minimumSize: const Size(200, 50), backgroundColor: Colors.white,
-    padding: const EdgeInsets.symmetric(horizontal: 16),
-    shape: const RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(Radius.circular(10)),
-    )
-  );
+      minimumSize: const Size(200, 50),
+      backgroundColor: Colors.white,
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ));
 
-   final ButtonStyle  raisedButtonStyle2 = ElevatedButton.styleFrom(
-       minimumSize: const Size(200, 50), backgroundColor: Colors.transparent,
-       padding: const EdgeInsets.symmetric(horizontal: 16),
-       shape: const RoundedRectangleBorder(
-         borderRadius: BorderRadius.all(Radius.circular(10)),
-       )
-   );
+  final ButtonStyle raisedButtonStyle2 = ElevatedButton.styleFrom(
+      minimumSize: const Size(200, 50),
+      backgroundColor: Colors.transparent,
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      shape: const RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ));
 
   @override
   Widget build(BuildContext context) {
@@ -126,38 +126,47 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       Padding(
-                        padding: const EdgeInsets.only(top: 2,left: 200),
+                        padding: const EdgeInsets.only(top: 2, left: 200),
                         child: TextButton(
-                          style: raisedButtonStyle2,
-                          onPressed: () { },
-                          child:  const Text('Forget password',style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16.0,
-                            fontFamily: 'FontSubHeader'
-                          ),),
-                        ),
+                            style: raisedButtonStyle2,
+                            onPressed: () {},
+                            child: Text(
+                              'Forget password',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 16.0,
+                                  fontFamily: 'FontSubHeader',
+                                  shadows: [
+                                    Shadow(
+                                        color: Colors.black.withOpacity(0.8),
+                                        offset: const Offset(5, 5),
+                                        blurRadius: 10.0)
+                                  ]),
+                            )),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 40),
                         child: ElevatedButton(
                           style: raisedButtonStyle,
-                          onPressed: () { },
-                          child:  Text('Login',style: TextStyle(
-                              color: Colors.indigo[900],
-                              fontSize: 16.0
-                          ),),
+                          onPressed: () {},
+                          child: Text(
+                            'Login',
+                            style: TextStyle(
+                                color: Colors.indigo[900], fontSize: 16.0),
+                          ),
                         ),
                       ),
                       const Padding(
-                        padding: EdgeInsets.only(top:8.0),
+                        padding: EdgeInsets.only(top: 8.0),
                         child: Center(
-                          child: Text("Don't have an account ?",style: TextStyle(
-                            fontSize: 16.0,
-                            color: Colors.white,
-                            fontFamily: 'FontSubHeader'
-                          ),),
+                          child: Text(
+                            "Don't have an account ?",
+                            style: TextStyle(
+                                fontSize: 16.0,
+                                color: Colors.white,
+                                fontFamily: 'FontSubHeader'),
+                          ),
                         ),
                       ),
                       Padding(
@@ -165,13 +174,24 @@ class LoginScreen extends StatelessWidget {
                         child: TextButton(
                           style: raisedButtonStyle2,
                           onPressed: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => RegisterScreen()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => RegisterScreen()));
                           },
-                          child:  const Text('Sign up',style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16.0,
-                              fontFamily: 'FontSubHeader'
-                          ),),
+                          child: Text(
+                            'Sign up',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 18.0,
+                                fontFamily: 'FontSubHeader',
+                                shadows: [
+                                  Shadow(
+                                      color: Colors.black.withOpacity(0.8),
+                                      offset: const Offset(5, 5),
+                                      blurRadius: 10.0)
+                                ]),
+                          ),
                         ),
                       ),
                     ],

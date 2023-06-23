@@ -104,17 +104,12 @@ class RegisterScreen extends StatelessWidget {
                     ),),
                   ),
                 ),
-                 Padding(
-                  padding: const EdgeInsets.all(20.0),
+                 const Padding(
+                  padding: EdgeInsets.all(20.0),
                   child: Text("Already have an account ?",style: TextStyle(
                     color: Colors.white,
                     fontSize: 16,
-                      shadows: [
-                        Shadow(
-                            color: Colors.black.withOpacity(0.8),
-                            offset: const Offset(5, 5),
-                            blurRadius: 10.0)
-                      ]),
+                    )
                   ),
                 ),
                 Padding(
@@ -124,11 +119,17 @@ class RegisterScreen extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
                     },
-                    child:  const Text('Sign in',style: TextStyle(
+                    child:   Text('Sign in',style: TextStyle(
                         color: Colors.white,
                         fontSize: 20.0,
-                        fontFamily: 'FontSubHeader'
-                    ),),
+                        fontFamily: 'FontSubHeader',
+                        shadows: [
+                          Shadow(
+                              color: Colors.black.withOpacity(0.8),
+                              offset: const Offset(5, 5),
+                              blurRadius: 10.0)
+                        ])
+                    ),
                   ),
                 ),
               ],
