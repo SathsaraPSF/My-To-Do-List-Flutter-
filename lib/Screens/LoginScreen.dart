@@ -2,9 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:to_do_ist/Screens/RegisterScreen.dart';
-
 import 'BackGroundImage.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'DashboardScreen.dart';
 
 class LoginScreen extends StatelessWidget {
   LoginScreen({super.key});
@@ -27,6 +28,7 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
         const BackgroundImage(),
@@ -130,7 +132,9 @@ class LoginScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 2, left: 200),
                         child: TextButton(
                             style: raisedButtonStyle2,
-                            onPressed: () {},
+                            onPressed: () {
+
+                            },
                             child: Text(
                               'Forget password',
                               style: TextStyle(
@@ -149,7 +153,12 @@ class LoginScreen extends StatelessWidget {
                         padding: const EdgeInsets.only(top: 40),
                         child: ElevatedButton(
                           style: raisedButtonStyle,
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const DashboardScreen()));
+                          },
                           child: Text(
                             'Login',
                             style: TextStyle(
