@@ -1,9 +1,15 @@
+
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:to_do_ist/Screens/SplashScreen.dart';
 
 import 'Screens/LoginScreen.dart';
 
-void main() {
-  runApp(const MyApp());
+
+void main()  {
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(statusBarColor: Colors.indigo));
+  // Preload images
+  runApp(const SplashScreen());
 }
 
 class MyApp extends StatelessWidget {
