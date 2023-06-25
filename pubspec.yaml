@@ -70,6 +70,10 @@ flutter:
      - images/personal.png
      - images/travel.png
      - images/family.png
+     - images/splash_back.png
+     - images/splash.png
+     - images/logo.png
+     - images/back_bg3.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
