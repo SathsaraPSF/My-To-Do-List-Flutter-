@@ -30,7 +30,7 @@ class RegisterScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        const BackgroundImage(),
+        const BackgroundImage(sourse:'images/back_image.jpg'),
         Scaffold(
           backgroundColor: Colors.transparent,
           body: Center(

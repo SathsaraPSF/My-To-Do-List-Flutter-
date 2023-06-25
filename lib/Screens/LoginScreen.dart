@@ -31,7 +31,7 @@ class LoginScreen extends StatelessWidget {
     final Size size = MediaQuery.of(context).size;
     return Stack(
       children: [
-        const BackgroundImage(),
+         const BackgroundImage(sourse:'images/back_image.jpg'),
         Scaffold(
           backgroundColor: Colors.transparent,
           body: Column(
