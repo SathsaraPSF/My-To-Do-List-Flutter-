@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_ist/Screens/LoginScreen.dart';
 import 'BackGroundImage.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'ListViewSetting.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -42,6 +45,7 @@ class SettingsScreen extends StatelessWidget {
                             "sat@gmail.com",
                             style: TextStyle(
                                 fontSize: 18,
+                                overflow: TextOverflow.clip,
                                 fontFamily: 'FontSubHeader',
                                 color: Colors.white54,
                                 fontWeight: FontWeight.w100),
@@ -49,9 +53,13 @@ class SettingsScreen extends StatelessWidget {
                         ],
                       ),
                       const SizedBox(width: 60),
-                      IconButton(onPressed: (){}, icon: const Icon(FontAwesomeIcons.penToSquare,size: 20,color: Colors.white,)
-
-                      ),
+                      IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            FontAwesomeIcons.penToSquare,
+                            size: 20,
+                            color: Colors.white60,
+                          )),
                     ],
                   ),
                 ),
@@ -59,6 +67,28 @@ class SettingsScreen extends StatelessWidget {
             ),
           ),
         ),
+        Padding(
+          padding: const EdgeInsets.only(top: 230.0, left: 20, right: 20),
+          child: SizedBox(
+            height: 600,
+            child: Column(
+              children:  [
+                const ListItems(
+                    title: 'Account', iconLeading: FontAwesomeIcons.solidUser, screen: null,),
+                const ListItems(
+                    title: 'Notification', iconLeading: FontAwesomeIcons.solidBell, screen: null,),
+                const ListItems(
+                    title: 'Support', iconLeading: FontAwesomeIcons.solidCircleQuestion, screen: null,),
+                const ListItems(
+                    title: 'Rate us', iconLeading: FontAwesomeIcons.solidStar, screen: null,),
+                const ListItems(
+                    title: 'Feedback', iconLeading: FontAwesomeIcons.solidHeart, screen: null,),
+                ListItems(
+                    title: 'Log out', iconLeading: FontAwesomeIcons.rightFromBracket, screen: LoginScreen(),)
+              ],
+            ),
+          ),
+        )
       ],
     );
   }
