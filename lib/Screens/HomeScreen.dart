@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'ListComponents.dart';
+import 'TodoCetogries.dart';
 import 'ListVerticle.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -60,22 +60,44 @@ class HomeScreen extends StatelessWidget {
                                 color: Colors.white,
                                 fontWeight: FontWeight.w300,
                               )),
-                          SizedBox(width: 10,),
+                          SizedBox(
+                            width: 10,
+                          ),
                           Icon(
-                              FontAwesomeIcons.arrowRight,
-                              color: Colors.black26,
-                            ),
+                            FontAwesomeIcons.arrowRight,
+                            color: Colors.black26,
+                          ),
                         ],
                       ),
                     ),
                     const SizedBox(
                       height: 20,
                     ),
-                    const Lists(),
+
+                    Container(
+                        height: 160,
+                        child: ListView(
+                          scrollDirection: Axis.horizontal,
+                          children: const [
+                            TodoCategory(
+                                categoryName: 'Work',
+                                categoryImage: 'images/work.png'),
+                            TodoCategory(
+                                categoryName: 'Personal',
+                                categoryImage: 'images/personal.png'),
+                            TodoCategory(
+                                categoryName: 'Travel',
+                                categoryImage: 'images/travel.png'),
+                            TodoCategory(
+                                categoryName: 'Family',
+                                categoryImage: 'images/family.png'),
+                          ],
+                        )),
+
                     const SizedBox(
                       height: 20,
                     ),
-                     Padding(
+                    Padding(
                       padding: const EdgeInsets.only(left: 30.0),
                       child: Row(
                         children: const [
@@ -85,7 +107,9 @@ class HomeScreen extends StatelessWidget {
                                 color: Colors.white,
                                 fontWeight: FontWeight.w300,
                               )),
-                          SizedBox(width: 10,),
+                          SizedBox(
+                            width: 10,
+                          ),
                           Icon(
                             FontAwesomeIcons.arrowDown,
                             color: Colors.black26,
@@ -93,7 +117,6 @@ class HomeScreen extends StatelessWidget {
                         ],
                       ),
                     ),
-
                     const Padding(
                       padding: EdgeInsets.symmetric(vertical: 5),
                       child: ListVerticle(),
